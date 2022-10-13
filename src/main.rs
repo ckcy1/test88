@@ -1,4 +1,6 @@
-trait test {
+
+use std::fmt::Display;
+trait Test {
     fn dushu(&self){
         println!("dus");
     }
@@ -9,12 +11,15 @@ struct dog{
 struct cat{
     name:String,
 }
-impl test for dog{
+impl Test for dog{
     // fn dushu(&self){
     //     println!("wwwwww");
     // }
 }
+fn ren(t: impl Test ){
+    println!("{:?}",t.dushu());
 
+}
 fn main() {
     let d = dog{name:String::from("wanwan")};
     d.dushu();
