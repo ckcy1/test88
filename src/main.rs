@@ -18,6 +18,14 @@ impl Test for dog{
 }
 fn ren(t: impl Test ){
     println!("{:?}",t.dushu());
+}
+fn ren3<T:Test>(t1:T){
+
+}
+fn ren1(t1:impl Test,t2:impl Test){
+
+}
+fn ren2<T:Test>(t1:T,t2:T){
 
 }
 fn main() {
